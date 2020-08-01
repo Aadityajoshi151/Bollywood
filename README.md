@@ -1,4 +1,4 @@
-# Blue Light Filter Website
+# Bollywood Game Desktop App
 ## Description:
 Cross platform desktop application for bollywood movie guessing game. Made using javascript.
 
