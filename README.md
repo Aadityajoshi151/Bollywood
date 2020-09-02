@@ -10,4 +10,4 @@ Cross platform desktop application for bollywood movie guessing game. Made using
 [Watch Demo Video Here](https://www.youtube.com/watch?v=6DMQYRhATLY)
 
 ## Your Feedback
-Please use the bollywood app and if you come across any bug, if you have any feature suggestion, please open an issue in this repository and I will try to resolve it as soon as possible. If you like this project please 🌟 this repository.
+Please use the bollywood app and if you come across any bug, if you have any feature suggestion, please open an issue in this repository and I will try to resolve it as soon as possible.
