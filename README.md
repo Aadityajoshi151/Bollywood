@@ -11,6 +11,7 @@ Click [here](https://github.com/Aadityajoshi151/Bollywood/releases/download/v1.0
 What started as a simple C++ program in first semester of college, evolved into a cross platform desktop application with a nice GUI. A professor of mine told me that the black CLI interface does not look good and a GUI would make this project very good. Indeed.
 We spent a lot of time in playing this in boring lectures in our college.
 I have tried to implement in the best way I could but suggestions for improvement are always welcome.
+
 [Here](https://github.com/Aadityajoshi151/Bollywood-CPP "Here") is the link to the old C++ program if someone is interested.
 
 ## 📜 How To Use:
@@ -22,6 +23,7 @@ Timer range is 10-300 seconds.
 - Click on proceed.
 - It will notify the user automatically if numbers or special symbols are present in the title.
 - Enter the letter one by one and based on your input, it will tell you whether your guess was right or wrong. Try to guess the movie before the time runs out.
+
 📺 Watch the demo video [here](https://www.youtube.com/watch?v=6DMQYRhATLY "here").
 
 ## 📷 Screenshots:
