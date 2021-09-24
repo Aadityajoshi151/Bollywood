@@ -26,10 +26,10 @@ Timer range is 10-300 seconds.
 
 ## 📷 Screenshots:
 **Main Menu**
-![Screenshot1](screenshots/1.jpg)
+![Screenshot1](screenshots/1.JPG)
 
 **Movie name visibility**
-![Screenshot1](screenshots/2.jpg)
+![Screenshot1](screenshots/2.JPG)
 
 **Corrent input message**
 ![Screenshot1](screenshots/3.jpg)
