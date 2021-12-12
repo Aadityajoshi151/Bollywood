@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+</head>
+<body>
+        <h1>Welcome to Bollywood &#127902;</h1>
+
+    <center>
+
+            <div style="display: block;">
+                <input type="password" id="movieinput" placeholder="Enter The Movie" >
+                <input id="openlistbtn" class="smallbtns" type="button" value="&#127909;">    
+            </div>
+            <br>
+                <input class="element" type="checkbox" id="toggle" onclick="Visibility()">
+                <label class="element" for="toggle" id="labelshow">Show</label>
+                <br>
+                    <label class="element" id="timelabel">Time Limit (in seconds)</label>
+                    <input class="element" type="number" id="timelimit" value="90" min="10" max="300" placeholder="0-300 seconds">
+                <br>
+                <input class="element buttonstyles" type="button" id="btn" value="Proceed">
+
+            <hr>
+            <label class="element" id="mainlabel">- - - - - -</label>
+            <input class="element" type="text" maxlength="1" id="charinput" disabled="true">
+            <input class="element buttonstyles" type="button" id="check" value="Check" disabled="true" onclick="checkletter()"><br><br>
+            <hr>
+    </center> 
+            <label id="one">Chances Remaining: </label>
+            <label id="chances">9</label><br>
+            <label id="two">Letters Used: </label>
+            <label id="used">-</label><br>
+            <label id="timeleft">Time Left:</label><hr>
+            <input class="element buttonstyles" type="button" value="Play Again" id="again" onclick="playAgain()" disabled="true"><br>
+            <footer>
+                <p id="signature">Created With &#9829; and &#9749; By Aaditya Joshi</p>
+            </footer>
+             
+
+                       
+            <script>
+                //THIS SCRIPT IS USED TO TOGGLE VISIBILITY OF THE MOVIE ENTERED
+            function Visibility() 
+            {
+            var x = document.getElementById("movieinput");
+            if (x.type === "password") 
+                {
+                    x.type = "text";
+                }
+            else
+            {
+                x.type = "password";
+            }
+            }
+            </script>
+            <script src="js/sweetalert2.all.min.js"></script>
+            <script src="js/index.js"></script>
+</body>
+</html>

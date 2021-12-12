@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+body
+{
+    font-family: 'Special Elite';
+    font-size: 20px;
+    background-color: #353638;
+}
+h1
+{
+    text-align: center;
+    color: #76F000;
+    font-family: 'Permanent Marker';
+    letter-spacing: 8px;
+}
+.element
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.buttonstyles
+{
+    background-color: #584bea;
+    font-family: 'Special Elite';
+    color: black;
+    border: none;
+    width: 150px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+#movieinput
+{
+    font-family: 'Special Elite';
+    display: inline;
+    width: 90%;
+    height: 30px;
+    background-color: #F3F3F3;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+}
+#timelimit
+{
+    background-color: #F3F3F3;
+    font-family: 'Special Elite';
+    font-size: 20px;
+    width: 10%;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+}
+#toggle
+{
+    margin-top: 10px;
+    text-align: center;
+    color: white; 
+}
+#btn
+{
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    height: 30px;
+    display:block;
+}
+#btn:hover , #check:hover , #again:hover
+{
+    background-color:#372ac7;
+    cursor: pointer;
+}
+hr
+{
+    background-position: 50%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #60a520;
+    border: 2px solid currentColor;
+
+}
+
+#mainlabel
+{
+    color: #E4E800;
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+}
+#charinput
+{
+    font-family: 'Special Elite';
+    font-size: 20px;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    width: 10%;
+}
+#one , #chances
+{
+    margin-left: 10px;
+    font-weight: bold;
+    color: #BDA2FF;
+}
+#two , #used
+{
+    margin-left: 10px;
+    font-weight: bold;
+    color: #76F000;
+} 
+#timeleft
+{
+    margin-left: 10px;
+    font-weight: bold;
+    color: orange;   
+}
+#again
+{
+    margin-left: 10px;
+}
+#labelshow , #timelabel
+{
+    color: white;
+}
+#signature
+{
+    color: #ffc107;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+.smallbtns
+{
+    background-color:#DCED31;
+    color: black;
+    border: none;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.smallbtns:hover
+{
+    cursor: pointer;
+    background-color: #b8c908;
+}
