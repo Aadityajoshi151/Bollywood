@@ -198,13 +198,9 @@ function checkletter()                  //check function (IMPORTANT)
         }
         chance--;                           //Decrement in chances
         if (chance>0)      //Show remaining chances
-        {
             document.getElementById("chances").innerHTML=chance+1; 
-        }  
         else
-        {
             document.getElementById("chances").innerHTML="Last Chance!"; 
-        }
         Swal({               //Wrong guess alert
             title: 'Oops',
             text: 'That Letter Does Not Belong To The Movie',
