@@ -6,7 +6,7 @@ var array1,array2,mod;
 var used="";    
 var rightused="";              
 var ch,i,win;
-var n=0,chance=9,o=0;  
+var n=0,chance=8,o=0;  
 var timeLeft;       
  /*
  array1 & original have the movie name without any change.
@@ -199,7 +199,7 @@ function checkletter()                  //check function (IMPORTANT)
         chance--;                           //Decrement in chances
         if (chance>0)      //Show remaining chances
         {
-            document.getElementById("chances").innerHTML=chance; 
+            document.getElementById("chances").innerHTML=chance+1; 
         }  
         else
         {
