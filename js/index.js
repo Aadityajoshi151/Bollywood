@@ -251,7 +251,7 @@ function checkletter()
             Swal({
                 type: 'success',
                 title: 'You Won!',
-                text: 'You Guessed The Correct Movie',
+                text: 'You Guessed The Correct Movie - '+original,
                 confirmButtonColor: '#DD6B55',
                 confirmButtonText: 'Play Again',
                 backdrop: 
