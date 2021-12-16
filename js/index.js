@@ -21,18 +21,13 @@ const vowels = ['A','E','I','O','U'];
  ch stores the character entered by the player.
  win is incremented every time when the guess is correct. When win=length of movie,player wins.
   */
-
 openlistbtn.addEventListener('click',() => {window.open('https://en.wikipedia.org/wiki/Lists_of_Bollywood_films', '_blank').focus();})
 
-
 proceedbtn.addEventListener('click',function(event){              //When proceed button is clicked
-    
     movie = document.getElementById("movieinput").value;
     movie = movie.toUpperCase();                                //Everything is converted to upper case because it looks good     
     if (movie=="")                                              //Condition if no movie is entered
-    {
         return;
-    }
     else
     {
         original=movie;                                      
@@ -54,9 +49,7 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
             confirmButtonText: 'OK',         
             })
             return;
-    }
-
-        
+    }    
     document.getElementById("mainlabel").innerHTML=array2.join(" ");
     document.getElementById("movieinput").disabled=true;
     document.getElementById("btn").disabled=true;
@@ -67,7 +60,6 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
     document.getElementById("timelimit").disabled=true;
 
     var elem = document.getElementById('timeleft');
-    
     var timerId = setInterval(countdown, 1000);
     
     function countdown() {
@@ -80,30 +72,21 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
             confirmButtonColor: '#DD6B55',
             confirmButtonText: 'Play Again',            
             }).then((result) => {
-                if (result.value) {
+                if (result.value)
                   location.reload();
-                }
               })
         return;
       } else 
       {
         if(timeleft == 999)
-        {
             elem.innerHTML = "Time Left";
-        }
         else
         { 
           elem.innerHTML = timeLeft + ' seconds remaining';
           timeLeft--;
         }
-      
-      }
-      
-        
-      
+      } 
     }
-
-
     for(i=0;i<array1.length;i++)              //Used for searching numbers in the movie title
     {
         if(numbers.includes(array1[i]))
@@ -121,27 +104,22 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
 var input = document.getElementById("movieinput");            //Enter key control for proceed button
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13)
       document.getElementById("btn").click();
-    }
   });
-  var charinput = document.getElementById("charinput");       //Enter key control for check button
+var charinput = document.getElementById("charinput");       //Enter key control for check button
   charinput.addEventListener("keyup", function(event) {
       event.preventDefault();
-      if (event.keyCode === 13) {
+      if (event.keyCode === 13)
         document.getElementById("check").click();
-      }
     });
 
 function checkletter()                  //check function (IMPORTANT)
 {
     ch = document.getElementById('charinput').value;
     ch = ch.toUpperCase();              //Entered character converted to upper case
-
     if(ch=="")                          //Condition if no character entered
-    {
         return;
-    }
     if(ch==" ")
     {
         document.getElementById('charinput').value = '';
@@ -192,9 +170,8 @@ function checkletter()                  //check function (IMPORTANT)
                 confirmButtonColor: '#DD6B55',
                 confirmButtonText: 'Play Again',            
                 }).then((result) => {
-                    if (result.value) {
+                    if (result.value)
                       location.reload();
-                    }
                   })
             return;
         }
@@ -227,16 +204,12 @@ function checkletter()                  //check function (IMPORTANT)
         for(i=0;i<array1.length;i++)       //Used to replace '-' with correct letter 
         {
             if(array1[i]==ch)                 
-            {
                 array2[i]=ch;
-            }
         } 
         for(i=0;i<mod.length;i++)         //Used to check the winning condition
         {
             if(mod[i]==array2[i])
-            {
                 win++;
-            }
         }       
         if(win==array2.length)         //WIN condition
         {
@@ -254,10 +227,8 @@ function checkletter()                  //check function (IMPORTANT)
 
                 `
                 }).then((result) => {
-                    if (result.value) {
+                    if (result.value)
                       location.reload();
-                    }
-
                   })
         } 
         document.getElementById("mainlabel").innerHTML=array2.join(" ");   //Showing the movie (mainlabel)
@@ -273,8 +244,7 @@ function playAgain()                     //Play again button (physical button)
         cancelButtonText: "No",
         confirmButtonText: 'Yes',
         }).then((result) => {
-            if (result.value) {
+            if (result.value)
               location.reload();
-            }
           })
 }
