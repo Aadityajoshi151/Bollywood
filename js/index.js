@@ -22,21 +22,27 @@ const vowels = ['A','E','I','O','U'];
  win is incremented every time when the guess is correct. When win=length of movie,player wins.
   */
 openlistbtn.addEventListener('click',() => {window.open('https://en.wikipedia.org/wiki/Lists_of_Bollywood_films', '_blank').focus();})
-
-proceedbtn.addEventListener('click',function(event){              //When proceed button is clicked
+//When proceed button is clicked
+proceedbtn.addEventListener('click',function(event){              
     movie = document.getElementById("movieinput").value;
-    movie = movie.toUpperCase();                                //Everything is converted to upper case because it looks good     
-    if (movie=="")                                              //Condition if no movie is entered
+    //Everything is converted to upper case because it looks good and avoids case confusion
+    movie = movie.toUpperCase();
+    //Condition if no movie is entered
+    if (movie=="")
         return;
     else
     {
         original=movie;                                      
         array1=movie;
-        movie=movie.replace(/ /g,"/");          //Spaces replaced with '/'
+        //Spaces replaced with '/'
+        movie=movie.replace(/ /g,"/");
         mod=movie;
-        mod=mod.split('');                      //Converted from string to array
-        movie=movie.replace(/[bcdfghjklmnpqrstvwxyz0123456789]/ig,"_");     //Consonants and numbers replaced with '-'
-        array2=movie.split('');                 //Converted from string to array
+        //Converted from string to array
+        mod=mod.split('');
+        //Consonants and numbers replaced with '-'
+        movie=movie.replace(/[bcdfghjklmnpqrstvwxyz0123456789]/ig,"_");
+        //Converted from string to array
+        array2=movie.split('');
          
     timeLeft = document.getElementById("timelimit").value;
     if(timeLeft<10 || timeLeft>300)
@@ -65,7 +71,8 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
     function countdown() {
       if (timeLeft == -1) {
         clearTimeout(timerId);
-        Swal({              //TIME-UP alert with play again request
+        //TIME-UP alert with play again request
+        Swal({
             type: 'error',
             title: 'Time Up!',
             text: 'The Correct Movie Was - '+original,
@@ -87,7 +94,8 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
         }
       } 
     }
-    for(i=0;i<array1.length;i++)              //Used for searching numbers in the movie title
+    //Used for searching numbers in the movie title
+    for(i=0;i<array1.length;i++)
     {
         if(numbers.includes(array1[i]))
         {
@@ -101,69 +109,83 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
     }
     }  
 })
-var input = document.getElementById("movieinput");            //Enter key control for proceed button
+//Enter key control for proceed button
+var input = document.getElementById("movieinput");
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13)
       document.getElementById("btn").click();
   });
-var charinput = document.getElementById("charinput");       //Enter key control for check button
+//Enter key control for check button
+var charinput = document.getElementById("charinput");
   charinput.addEventListener("keyup", function(event) {
       event.preventDefault();
       if (event.keyCode === 13)
         document.getElementById("check").click();
     });
-
-function checkletter()                  //check function (IMPORTANT)
+//check function (IMPORTANT)
+function checkletter()
 {
     ch = document.getElementById('charinput').value;
-    ch = ch.toUpperCase();              //Entered character converted to upper case
-    if(ch=="")                          //Condition if no character entered
+    //Entered character converted to upper case
+    ch = ch.toUpperCase();
+    //Condition if no character entered
+    if(ch=="")
         return;
     if(ch==" ")
     {
         document.getElementById('charinput').value = '';
         return;
     }
-    if(vowels.includes(ch))   //Condition if a vowel is entered
+    //Condition if a vowel is entered
+    if(vowels.includes(ch))
     {
         Swal({
             title: 'VOWEL',
             text: 'You Cannot Use Vowels.Vowels Are Already Displayed',
             type: 'info',
         })
-        document.getElementById('charinput').value = '';     //Character input textbox cleared for next character
+        //Character input textbox cleared for next character
+        document.getElementById('charinput').value = '';
         return;
     }
     o = used.search(ch);
-    if(o!=-1)                   //Condition where the entered character is already used
+    //Condition where the entered character is already used
+    if(o!=-1)
     {
         Swal({
             title: 'USED',
             text: 'You Have Already Tried That Letter Once And It Does Not Belong To The Movie',
             type: 'info',
         })
-        document.getElementById('charinput').value = '';    //Character input textbox cleared for next character
+        //Character input textbox cleared for next character
+        document.getElementById('charinput').value = '';
         return;
     }
     o = rightused.search(ch);
-    if(o!=-1)                   //Condition where the entered character is correct and already used
+    //Condition where the entered character is correct and already used
+    if(o!=-1)
     {
         Swal({
             title: 'USED',
             text: 'You Have Already Tried That Letter Once And It Belongs To The Movie',
             type: 'info',
         })
-        document.getElementById('charinput').value = '';    //Character input textbox cleared for next character
+        //Character input textbox cleared for next character
+        document.getElementById('charinput').value = '';
         return;
     }
-    n = original.search(ch);            //Character searched in the original where no changes are made
-    if(n==-1)                           //Condition where the entered character is not found
+    //Character searched in the original where no changes are made
+    n = original.search(ch);
+    //Condition where the entered character is not found
+    if(n==-1)
     {
-        if(chance<=0)           //Condition where no more chances are left (Losing Condition)
+        //Condition where no more chances are left (Losing Condition)
+        if(chance<=0)
         {
             timeleft=999;
-            Swal({              //LOST alert with play again request
+            //LOST alert with play again request
+            Swal({
                 type: 'error',
                 title: 'You Lost!',
                 text: 'The Correct Movie Was - '+original,
@@ -175,46 +197,58 @@ function checkletter()                  //check function (IMPORTANT)
                   })
             return;
         }
-        chance--;                           //Decrement in chances
-        if (chance>0)      //Show remaining chances
+        //Decrement in chances
+        chance--;
+        //Show remaining chances
+        if (chance>0)
             document.getElementById("chances").innerHTML=chance+1; 
         else
             document.getElementById("chances").innerHTML="Last Chance!"; 
-        Swal({               //Wrong guess alert
+        //Wrong guess alert
+        Swal({
             title: 'Oops',
             text: 'That Letter Does Not Belong To The Movie',
             type: 'error',
             timer: 1000
         })
-        document.getElementById('charinput').value = '';     //Character input textbox cleared for next character
-        used+=(ch+",");                                      //Wrong guessed letter added to used string
-        document.getElementById("used").innerHTML=used;      //Show used letters
+        //Character input textbox cleared for next character
+        document.getElementById('charinput').value = '';
+        //Wrong guessed letter added to used string
+        used+=(ch+",");
+        //Show used letters
+        document.getElementById("used").innerHTML=used;
     }
     else
     {
-        Swal({           //Right guess alert
+        //Right guess alert
+        Swal({
             title: 'Very Good',
             text: 'That Letter Belongs To The Movie',
             type: 'success',
             timer: 1000
         })
-        rightused+=(ch+",");  
-        document.getElementById('charinput').value = '';     //Character input textbox cleared for next character
+        rightused+=(ch+",");
+        //Character input textbox cleared for next character
+        document.getElementById('charinput').value = '';
         win=0;
-        for(i=0;i<array1.length;i++)       //Used to replace '-' with correct letter 
+        //Used to replace '-' with correct letter
+        for(i=0;i<array1.length;i++)
         {
             if(array1[i]==ch)                 
                 array2[i]=ch;
-        } 
-        for(i=0;i<mod.length;i++)         //Used to check the winning condition
+        }
+        //Used to check the winning condition
+        for(i=0;i<mod.length;i++)
         {
             if(mod[i]==array2[i])
                 win++;
-        }       
-        if(win==array2.length)         //WIN condition
+        }
+        //WIN condition     
+        if(win==array2.length)
         {
             timeleft=999;
-            Swal({                  //WIN alert with play again request 
+            //WIN alert with play again request
+            Swal({
                 type: 'success',
                 title: 'You Won!',
                 text: 'You Guessed The Correct Movie',
@@ -230,11 +264,13 @@ function checkletter()                  //check function (IMPORTANT)
                     if (result.value)
                       location.reload();
                   })
-        } 
-        document.getElementById("mainlabel").innerHTML=array2.join(" ");   //Showing the movie (mainlabel)
+        }
+        //Showing the movie (mainlabel)
+        document.getElementById("mainlabel").innerHTML=array2.join(" ");
     }
 }
-function playAgain()                     //Play again button (physical button)
+//Play again button (physical button)
+function playAgain()
 {
     Swal({
         type: 'question',
