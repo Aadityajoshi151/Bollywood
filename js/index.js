@@ -7,7 +7,9 @@ var used="";
 var rightused="";              
 var ch,i,win;
 var n=0,chance=8,o=0;  
-var timeLeft;       
+var timeLeft;
+const numbers = ['1','2','3','4','5','6','7','8','9','0'];       
+const vowels = ['A','E','I','O','U'];
  /*
  array1 & original have the movie name without any change.
  array2 & movie have the movie name with dashes.
@@ -104,7 +106,7 @@ proceedbtn.addEventListener('click',function(event){              //When proceed
 
     for(i=0;i<array1.length;i++)              //Used for searching numbers in the movie title
     {
-        if(array1[i]=='1' || array1[i]=='2' || array1[i]=='3' || array1[i]=='4' || array1[i]=='5' || array1[i]=='6' || array1[i]=='7' || array1[i]=='8' || array1[i]=='9' || array1[i]=='0')
+        if(numbers.includes(array1[i]))
         {
             Swal({
                 title: 'Hint',
@@ -145,7 +147,7 @@ function checkletter()                  //check function (IMPORTANT)
         document.getElementById('charinput').value = '';
         return;
     }
-    if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')   //Condition if a vowel is entered
+    if(vowels.includes(ch))   //Condition if a vowel is entered
     {
         Swal({
             title: 'VOWEL',
