@@ -27,7 +27,10 @@ proceedbtn.addEventListener('click',function(event){
     movie = document.getElementById("movieinput").value;
     //Everything is converted to upper case because it looks good and avoids case confusion
     movie = movie.toUpperCase();
-    if (movie.match(/[^AEIOU]/gi) == null)
+    //Condition if no movie is entered
+    if (movie=="")
+        return;
+    else if (movie.match(/[^AEIOU]/gi) == null)
     {
         Swal({              
             type: 'error',
@@ -38,9 +41,6 @@ proceedbtn.addEventListener('click',function(event){
             })
             return;
     }
-    //Condition if no movie is entered
-    if (movie=="")
-        return;
     else
     {
         original=movie;                                      
