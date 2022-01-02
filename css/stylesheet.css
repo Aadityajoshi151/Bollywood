@@ -1,181 +1,163 @@
-body
-{
-    font-family: monospace;
-    font-size: 20px;
-    background-image: url("Design.png");
-    background-repeat: no-repeat;
-    background-size: 800px 343px
+body {
+  font-family: monospace;
+  font-size: 20px;
+  background-image: url("Design.png");
+  background-repeat: no-repeat;
+  background-size: 800px 343px;
 }
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-header
-{
+header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
   -webkit-app-region: drag;
   background: #3d474b;
 }
-.option
-{
+.option {
   padding: 10px 25px;
   font-size: 15px;
   color: white;
   cursor: pointer;
   -webkit-app-region: no-drag;
 }
-.option:hover
-{
-  background: #FF0000;
+.option:hover {
+  background: #ff0000;
   border-radius: 10px;
 }
-#title
-{
-    margin-right: 470px;
-    margin-top: 8px;
-    color: white;
+#title {
+  margin-right: 470px;
+  margin-top: 8px;
+  color: white;
 }
-#titleicon
-{
-    margin-top: 7px;
-    margin-right: 7px;
-
+#titleicon {
+  margin-top: 7px;
+  margin-right: 7px;
 }
-#movieinput
-{
-    background-color: #F3F3F3;
-    font-family: monospace;
-    font-size: 20px;
-    width: 90%;
-    text-align: center;
-    border-radius: 3px;
-    border: none;
-    margin-top: 10px;
-    margin-left: 35px;
-    font-weight: bold;
+#movieinput {
+  background-color: #f3f3f3;
+  font-family: monospace;
+  font-size: 20px;
+  width: 90%;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  margin-top: 10px;
+  margin-left: 35px;
+  font-weight: bold;
 }
-#timelimit
-{
-    background-color: #F3F3F3;
-    font-family: monospace;
-    font-size: 20px;
-    width: 10%;
-    text-align: center;
-    border-radius: 3px;
-    border: none;
-    margin-top: 10px;
-    margin-left: 3px;
+#timelimit {
+  background-color: #f3f3f3;
+  font-family: monospace;
+  font-size: 20px;
+  width: 10%;
+  text-align: center;
+  border-radius: 3px;
+  border: none;
+  margin-top: 10px;
+  margin-left: 3px;
 }
-#toggle
-{
-    margin-left: 360px;
-    margin-top: 10px;
-    text-align: center;
-    color: white; 
+#toggle {
+  margin-left: 360px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
 }
-#butt
-{
-    border-radius: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4px;
-    margin-bottom: 20px;
-    background-color: rgb(0, 223, 163);
-    color: black;
-    border: none;
-    width: 150px;
-    font-family: monospace;
-    height: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    display:block;
+#button {
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  background-color: rgb(0, 223, 163);
+  color: black;
+  border: none;
+  width: 150px;
+  font-family: monospace;
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
 }
-#butt:hover , #check:hover , #again:hover
-{
-    background-color: rgb(2, 146, 108);
-    cursor: pointer;
+#button:hover,
+#check:hover,
+#again:hover {
+  background-color: rgb(2, 146, 108);
+  cursor: pointer;
 }
 
-#mainlabel
-{
-    color: #E4E800;
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 20px;
+#mainlabel {
+  color: #e4e800;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
 }
-#charinput
-{
-    margin-top: 0px;
-    margin-left: 280px;
-    font-family: monospace;
-    font-size: 20px;
-    border-radius: 3px;
-    border: none;
-    font-weight: bold;
-    width: 10%;
+#charinput {
+  margin-top: 0px;
+  margin-left: 280px;
+  font-family: monospace;
+  font-size: 20px;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+  width: 10%;
 }
-#check
-{
-    background-color: rgb(0, 223, 163);
-    color: black;
-    border: none;
-    width: 150px;
-    font-family: monospace;
-    height: 25px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 3px;
-    margin-bottom: 10px;
-
+#check {
+  background-color: rgb(0, 223, 163);
+  color: black;
+  border: none;
+  width: 150px;
+  font-family: monospace;
+  height: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-bottom: 10px;
 }
-#one , #chances
-{
-    margin-left: 10px;
-    margin-top: 7px;
-    font-weight: bold;
-    color: #BDA2FF;
+#one,
+#chances {
+  margin-left: 10px;
+  margin-top: 7px;
+  font-weight: bold;
+  color: #bda2ff;
 }
-#two , #used
-{
-    margin-left: 10px;
-    margin-top: 7px;
-    font-weight: bold;
-    color: #76F000;
-} 
-#timeleft
-{
-    margin-left: 10px;
-    margin-top: 7px;
-    font-weight: bold;
-    color: orange;   
+#two,
+#used {
+  margin-left: 10px;
+  margin-top: 7px;
+  font-weight: bold;
+  color: #76f000;
 }
-#again
-{
-    background-color: rgb(0, 223, 163);
-    color: black;
-    border: none;
-    width: 150px;
-    font-family: monospace;
-    height: 25px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 3px;
-    margin-left: 10px;
+#timeleft {
+  margin-left: 10px;
+  margin-top: 7px;
+  font-weight: bold;
+  color: orange;
 }
-#labelshow , #timelabel
-{
-    color: white;
+#again {
+  background-color: rgb(0, 223, 163);
+  color: black;
+  border: none;
+  width: 150px;
+  font-family: monospace;
+  height: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-left: 10px;
 }
-#signature
-{
-    text-align: center;
-    font-family: monospace;
-    font-size: 18px;
-    color: #ffc107;
-    font-weight: bold;
+#labelshow,
+#timelabel {
+  color: white;
+}
+#signature {
+  text-align: center;
+  font-family: monospace;
+  font-size: 18px;
+  color: #ffc107;
+  font-weight: bold;
 }
