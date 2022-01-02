@@ -1,0 +1,61 @@
+<DOCTYPE HTML>
+    <html>
+        <head>
+            <link rel="stylesheet" href="stylesheet.css">
+            <link rel="stylesheet" href="sweetalert2.css">
+        </head>
+        <body>
+                <div id="content">
+                        <header>
+                            
+                            <div class="option" id="close">&#x2716;</div>
+                            <div class="option" id="minimize">&#8212;</div>
+                            <div class="option" id="openlist">&#127909;</div>
+                            <div id="title">Bollywood</div>
+                            <div id="titleicon"><img src="titleicon.png"></div>
+                           
+                            
+                        </header>
+                      </div>
+            <input type="password" id="movieinput" placeholder="Enter The Movie" >
+            <input type="checkbox" id="toggle" onclick="Visibility()">
+            <label for="toggle" id="labelshow">Show</label>
+            <br>
+            <center>
+                <label id="timelabel">Time Limit (in seconds)</label>
+                <input type="number" id="timelimit" value="90" min="10" max="300" placeholder="0-300 seconds">
+            </center>
+            <br>
+            <input type="button" id="butt" value="Proceed" onclick="validate()">
+            <hr>
+            <label id="mainlabel">- - - - - -</label><br>
+            <input type="text" maxlength="1" id="charinput" disabled="true">
+            <input type="button" id="check" value="Check" disabled="true" onclick="checkletter()"><br><br><hr>
+            <label id="one">Chances Remaining: </label>
+            <label id="chances">9</label><br>
+            <label id="two">Letters Used: </label>
+            <label id="used">-</label><br>
+            <label id="timeleft">Time Left:</label><hr><br>
+            <input type="button" value="Play Again" id="again" onclick="playAgain()" disabled="true"><br>
+            <p id="signature">Created With &#9829; and &#9749; By Aaditya Joshi</p>
+
+            
+            <script>
+                //THIS SCRIPT IS USED TO TOGGLE VISIBILITY OF THE MOVIE ENTERED
+            function Visibility() 
+            {
+            var x = document.getElementById("movieinput");
+            if (x.type === "password") 
+                {
+                    x.type = "text";
+                }
+            else
+            {
+                x.type = "password";
+            }
+            }
+            </script>
+            <script src="sweetalert2.all.min.js"></script>
+            <script src="index.js"></script>
+        </body>
+        </html>
