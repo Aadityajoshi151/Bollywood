@@ -58,7 +58,7 @@ proceedbtn.addEventListener("click", function (event) {
     movie = movie.replace(/ /g, "/"); //Spaces replaced with '/'
     mod = movie;
     mod = mod.split(""); //Converted from string to array
-    movie = movie.replace(/[bcdfghjklmnpqrstvwxyz0123456789]/gi, "-"); //Consonants and numbers replaced with '-'
+    movie = movie.replace(/[bcdfghjklmnpqrstvwxyz0123456789]/gi, "_"); //Consonants and numbers replaced with '-'
     array2 = movie.split(""); //Converted from string to array
 
     timeLeft = document.getElementById("timelimit").value;
