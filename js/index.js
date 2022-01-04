@@ -73,7 +73,7 @@ proceedbtn.addEventListener("click", function (event) {
       return;
     }
 
-    document.getElementById("mainlabel").innerHTML = array2;
+    document.getElementById("mainlabel").innerHTML = array2.join(" ");
     document.getElementById("movieinput").disabled = true;
     document.getElementById("button").disabled = true;
     document.getElementById("toggle").disabled = true;
@@ -288,7 +288,7 @@ function checkletter() {
         }
       });
     }
-    document.getElementById("mainlabel").innerHTML = array2; //Showing the movie (mainlabel)
+    document.getElementById("mainlabel").innerHTML = array2.join(" "); //Showing the movie (mainlabel)
   }
 }
 function playAgain() {
