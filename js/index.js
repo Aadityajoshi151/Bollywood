@@ -51,6 +51,17 @@ proceedbtn.addEventListener("click", function (event) {
 
   movie = document.getElementById("movieinput").value;
   movie = movie.toUpperCase(); //Everything is converted to upper case because it looks good
+  if (movie.match(/[^AEIOU]/gi) == null)
+  {
+      Swal({              
+          type: 'error',
+          title: 'No Consonant',
+          text: 'There Must Be Consonants Present In The Movie Name',
+          confirmButtonColor: '#DD6B55',
+          confirmButtonText: 'OK',         
+          })
+          return;
+  }
   if (movie == "") {
     //Condition if no movie is entered
     return;
