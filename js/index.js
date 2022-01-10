@@ -1,6 +1,11 @@
 const checkbtn = document.getElementById('check');    //Used for invoking check button function
 const proceedbtn = document.getElementById('btn');   //Used for invoking proceed button function
 const openlistbtn = document.getElementById('openlistbtn'); // Used for open wikipedia list page
+const timelimit = document.getElementById("timelimit");
+const mainlabel = document.getElementById("mainlabel");
+const btn = document.getElementById("btn");
+const check =  document.getElementById("check");
+const chances = document.getElementById("chances");
 var movie,original;
 var array1,array2,mod;
 var used="";    
@@ -55,7 +60,7 @@ proceedbtn.addEventListener('click',function(event){
         //Converted from string to array
         array2=movie.split('');
          
-    timeLeft = document.getElementById("timelimit").value;
+    timeLeft = timelimit.value;
     if(timeLeft<10 || timeLeft>300)
     {
         Swal({              
@@ -67,14 +72,14 @@ proceedbtn.addEventListener('click',function(event){
             })
             return;
     }    
-    document.getElementById("mainlabel").innerHTML=array2.join(" ");
+    mainlabel.innerHTML=array2.join(" ");
     document.getElementById("movieinput").disabled=true;
-    document.getElementById("btn").disabled=true;
+    btn.disabled=true;
     document.getElementById("toggle").disabled=true;
     document.getElementById("charinput").disabled=false;
-    document.getElementById("check").disabled=false;
+    check.disabled=false;
     document.getElementById("again").disabled=false;
-    document.getElementById("timelimit").disabled=true;
+    timelimit.disabled=true;
 
     var elem = document.getElementById('timeleft');
     var timerId = setInterval(countdown, 1000);
@@ -125,14 +130,14 @@ var input = document.getElementById("movieinput");
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13)
-      document.getElementById("btn").click();
+      bt.click();
   });
 //Enter key control for check button
 var charinput = document.getElementById("charinput");
   charinput.addEventListener("keyup", function(event) {
       event.preventDefault();
       if (event.keyCode === 13)
-        document.getElementById("check").click();
+        check.click();
     });
 //check function (IMPORTANT)
 function checkletter()
@@ -212,9 +217,9 @@ function checkletter()
         chance--;
         //Show remaining chances
         if (chance>0)
-            document.getElementById("chances").innerHTML=chance+1; 
+            chances.innerHTML=chance+1; 
         else
-            document.getElementById("chances").innerHTML="Last Chance!"; 
+            chances.innerHTML="Last Chance!"; 
         //Wrong guess alert
         Swal({
             title: 'Oops',
@@ -277,7 +282,7 @@ function checkletter()
                   })
         }
         //Showing the movie (mainlabel)
-        document.getElementById("mainlabel").innerHTML=array2.join(" ");
+        mainlabel.innerHTML=array2.join(" ");
     }
 }
 //Play again button (physical button)
