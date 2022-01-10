@@ -268,7 +268,7 @@ function checkletter()
                 backdrop: 
                 `
                 rgb(123,0,18,0.3)
-                url("/assets/Fireworks.gif")
+                url("./assets/Fireworks.gif")
 
                 `
                 }).then((result) => {
