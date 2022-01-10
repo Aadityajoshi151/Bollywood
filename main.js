@@ -7,7 +7,7 @@ let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({ width: 800, height: 490, minimizable: false,frame: false, maximizable: false, resizable: false, backgroundColor: '#455357' })
+  win = new BrowserWindow({ width: 800, height: 490, minimizable: false,frame: false, maximizable: false, resizable: false, backgroundColor: '#353638' })
   win.setMenu(null);
   // and load the index.html of the app.
   win.loadFile('index.html')

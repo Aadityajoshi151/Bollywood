@@ -1,7 +1,6 @@
 body {
   font-family: monospace;
   font-size: 20px;
-  background-image: url("Design.png");
   background-repeat: no-repeat;
   background-size: 800px 343px;
 }
@@ -15,7 +14,7 @@ header {
   flex-direction: row-reverse;
   justify-content: flex-start;
   -webkit-app-region: drag;
-  background: #3d474b;
+  background: #353638;
 }
 .option {
   padding: 10px 25px;
