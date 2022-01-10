@@ -280,6 +280,13 @@ function checkletter() {
         confirmButtonColor: "#DD6B55",
         cancelButtonText: "Quit Game",
         confirmButtonText: "Play Again",
+        backdrop: 
+        `
+        rgb(123,0,18,0.3)
+        url("./assets/Fireworks.gif")
+        center
+        no-repeat
+        `
       }).then((result) => {
         if (result.value) {
           location.reload();
