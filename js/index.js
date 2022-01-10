@@ -269,7 +269,7 @@ function checkletter() {
         //WIN alert with play again request
         type: "success",
         title: "You Won!",
-        text: "You Guessed The Correct Movie",
+        text: "You Guessed The Correct Movie - "+original,
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
         cancelButtonText: "Quit Game",
