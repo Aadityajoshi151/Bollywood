@@ -29,7 +29,7 @@ var used = "";
 var rightused = "";
 var ch, i, win;
 var n = 0,
-  chance = 9,
+  chance = 8,
   o = 0;
 var timeLeft;
 /*
@@ -228,7 +228,10 @@ function checkletter() {
       return;
     }
     chance--; //Decrement in chances
-    document.getElementById("chances").innerHTML = chance; //Show remaining chances
+    if (chance>0)      //Show remaining chances
+            document.getElementById("chances").innerHTML=chance+1;   
+        else
+            document.getElementById("chances").innerHTML="Last Chance!"; 
     Swal({
       //Wrong guess alert
       title: "Oops",
