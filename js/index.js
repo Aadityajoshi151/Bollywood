@@ -166,7 +166,7 @@ function checkletter()
     {
         Swal({
             title: 'USED',
-            text: 'You Have Already Tried That Letter Once And It Does Not Belong To The Movie',
+            text: 'You Have Already Tried That Character Once And It Does Not Belong To The Movie',
             type: 'info',
         })
         //Character input textbox cleared for next character
@@ -179,7 +179,7 @@ function checkletter()
     {
         Swal({
             title: 'USED',
-            text: 'You Have Already Tried That Letter Once And It Belongs To The Movie',
+            text: 'You Have Already Tried That Character Once And It Belongs To The Movie',
             type: 'info',
         })
         //Character input textbox cleared for next character
@@ -218,7 +218,7 @@ function checkletter()
         //Wrong guess alert
         Swal({
             title: 'Oops',
-            text: 'That Letter Does Not Belong To The Movie',
+            text: 'That Character Does Not Belong To The Movie',
             type: 'error',
             timer: 1000
         })
@@ -234,7 +234,7 @@ function checkletter()
         //Right guess alert
         Swal({
             title: 'Very Good',
-            text: 'That Letter Belongs To The Movie',
+            text: 'That Character Belongs To The Movie',
             type: 'success',
             timer: 1000
         })
