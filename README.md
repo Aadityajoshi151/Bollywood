@@ -18,11 +18,6 @@ Made with [Electron.js](https://www.electronjs.org/ "Electron.js").
         <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" /></a>
 <a href="https://www.mediafire.com/file/3tcu5wsze4tr2be/Bollywood_v1.1.0_-_Linux.zip/file" alt="Linux Mirror Link">
         <img src="https://img.shields.io/badge/Linux (Mirror)-FCC624?style=for-the-badge&logo=linux&logoColor=black" /></a>
-<br>
-<a href="https://github.com/Aadityajoshi151/Bollywood/releases/download/v1.1.0/Bollywood.v1.1.0.-.MacOS.zip" alt="Download For Mac">
-        <img src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white" /></a>
-<a href="https://www.mediafire.com/file/nus36p8d2v4zprw/Bollywood_v1.1.0_-_MacOS.zip/file" alt="Mac Mirror Link">
-        <img src="https://img.shields.io/badge/mac%20os (Mirror)-000000?style=for-the-badge&logo=apple&logoColor=white" /></a>
 
 ## 📝 Description:
 
